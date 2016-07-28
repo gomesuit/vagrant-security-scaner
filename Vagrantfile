@@ -18,6 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     #host.vm.provision :shell, path: "install-skipfish.sh"
     #host.vm.provision :shell, path: "install-nikto.sh"
     #host.vm.provision :shell, path: "install-namp.sh"
+    host.vm.provision :shell, path: "install-wpscan.sh"
   end
 
 end

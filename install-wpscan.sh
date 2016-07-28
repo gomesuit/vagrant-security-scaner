@@ -4,12 +4,12 @@
 
 yum install -y git
 
-git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-exec $SHELL -l
+git clone git://github.com/sstephenson/rbenv.git /root/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /root/.bash_profile
+echo 'eval "$(rbenv init -)"' >> /root/.bash_profile
+. ~/.bash_profile
 
-git clone git://github.com/sstephenson/ruby-build.git .rbenv/plugins/ruby-build
+git clone git://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build
 
 yum install -y gcc openssl-devel readline-devel zlib-devel
 
@@ -18,6 +18,7 @@ rbenv global 2.3.1
 
 # ========================================
 
+yum install -y wget
 
 wget https://github.com/wpscanteam/wpscan/tarball/master
 tar zxf master
